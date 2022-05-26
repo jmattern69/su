@@ -12,8 +12,13 @@
   const urlParams = new URLSearchParams(queryString);
 	const product = urlParams.get('clid');
   let em = "";
-  if (product ==='' || product.trim() ===''){ return false; }
-    try {
+  if (product ==='' || product.trim() ==='')
+  { 
+	console.log("empty parameters"); 
+  
+  }else {
+  	
+	  try {
          em = window.atob(product); //decodes
     } catch (err) {
         em = product;
@@ -104,6 +109,9 @@
 	}
 		}
 	});
+  
+  }
+    
 </script>
 </body>
 </html>
